@@ -1,1 +1,0 @@
-/Users/lirwin/git-repos/lirwin-repos/ember-ratings/tmp/broccoli_merge_trees-input_base_path-6Zc6Fq64.tmp/0/sinon.js

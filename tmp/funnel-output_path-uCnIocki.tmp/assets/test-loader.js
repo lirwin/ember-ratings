@@ -1,1 +1,0 @@
-/Users/lirwin/git-repos/lirwin-repos/ember-ratings/tmp/funnel-input_base_path-f9aMn27f.tmp/0/bower_components/ember-cli-test-loader/test-loader.js

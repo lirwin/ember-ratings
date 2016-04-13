@@ -1,1 +1,0 @@
-/Users/lirwin/git-repos/lirwin-repos/ember-ratings/app/resolver.js
