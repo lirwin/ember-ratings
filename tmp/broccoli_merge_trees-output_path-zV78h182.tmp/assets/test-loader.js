@@ -1,0 +1,1 @@
+/Users/lirwin/git-repos/lirwin-repos/ember-ratings/bower_components/ember-cli-test-loader/test-loader.js

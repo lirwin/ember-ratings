@@ -1,0 +1,1 @@
+/Users/lirwin/git-repos/lirwin-repos/ember-ratings/node_modules/ember-cli-app-version/app/components/app-version.js

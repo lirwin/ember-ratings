@@ -1,0 +1,1 @@
+/Users/lirwin/git-repos/lirwin-repos/ember-ratings/node_modules/klassy/lib/klassy.js

@@ -1,0 +1,1 @@
+/Users/lirwin/git-repos/lirwin-repos/ember-ratings/tmp/funnel-input_base_path-xgXVt2zV.tmp/0/components/app-version.js
