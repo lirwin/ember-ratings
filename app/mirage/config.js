@@ -1,103 +1,97 @@
 export default function() {
-    this.get('/beers', function() {
-        return {
-            data: [{
-                "id": "0",
-                "name": "Heat Miser's Hooch",
-                "brand": "Happy Hops",
-                "image": "images/beer-1.jpg"
-            }, {
-                "id": "1",
-                "author": "",
-                "name": "Santa's Lil' Helper",
-                "brand": "Happy Hops",
-                "image": "images/beer-2.jpg"
-            }, {
-                "id": "2",
-                "name": "Yukon's Silver Ale",
-                "brand": "Happy Hops",
-                "image": "images/beer-3.jpg"
-            }, {
-                "id": "3",
-                "name": "Blitzen Stout",
-                "brand": "Happy Hops",
-                "image": "images/beer-1.jpg"
-            }, {
-                "id": "4",
-                "name": "Misfit Malt Beverage",
-                "brand": "Happy Hops",
-                "image": "images/beer-2.jpg"
-            }, {
-                "id": "5",
-                "name": "Artic Amber Ale",
-                "brand": "Happy Hops",
-                "image": "images/beer-3.jpg"
-            }, {
-                "id": "6",
-                "name": "Jingle Rock Rye",
-                "brand": "Happy Hops",
-                "image": "images/beer-1.jpg"
-            }, {
-                "id": "7",
-                "name": "Vixen's Velvet",
-                "brand": "Happy Hops",
-                "image": "images/beer-2.jpg"
-            }, {
-                "id": "8",
-                "name": "Stocking Stuffer Stout",
-                "brand": "Happy Hops",
-                "image": "images/beer-3.jpg"
-            }, {
-                "id": "9",
-                "name": "Prancer's Punch",
-                "brand": "Happy Hops",
-                "image": "images/beer-1.jpg"
-            }, {
-                "id": "10",
-                "name": "Green Grinch Porter",
-                "brand": "Happy Hops",
-                "image": "images/beer-2.jpg"
-            }]
-        };
-    });
-
-
-    this.get('/ratings', function() {
-        return {
-            data: [{
-                "id": "1449424205433",
-                "author": "Mrs. Claus",
-                "name": "Sleighbells Are Ring'n",
-                "brand": "Happy Hops",
-                "image": "images/beer-3.jpg",
-                "numStars": "3",
-                "title": "Love this Beer!",
-                "text": "Goes down smooth.",
-                "date": "1449733122419"
-            }, {
-                "id": "1420070400000",
-                "author": "Hermie",
-                "name": "Rudolph's Revenge",
-                "brand": "Happy Hops",
-                "image": "images/beer-2.jpg",
-                "numStars": "3",
-                "title": "",
-                "text": "",
-                "date": "1449733128160"
-            }, {
-                "id": "1388534400000",
-                "author": "Jane Doe",
-                "name": "Santa's Slayer Pale Ale",
-                "brand": "Happy Hops",
-                "image": "images/beer-1.jpg",
-                "numStars": "1",
-                "title": "",
-                "text": "Tastes like Santa's socks.",
-                "date": "1449733149222"
-            }]
-        };
-    });
-
+  this.get('/beers', function() {
+    return {
+      data: [{
+        "id": "1",
+        type: 'beers',
+        attributes: {
+          "name": "Heat Miser's Hooch",
+          "brand": "Happy Hops",
+          "image": "images/beer-1.jpg"
+        }
+      }, {
+        "id": "2",
+        type: 'beers',
+        attributes: {
+          "name": "Santa's Lil' Helper",
+          "brand": "Happy Hops",
+          "image": "images/beer-2.jpg"
+        }
+      }, {
+        "id": "3",
+        type: 'beers',
+        attributes: {
+          "name": "Yukon's Silver Ale",
+          "brand": "Happy Hops",
+          "image": "images/beer-3.jpg"
+        }
+      }, {
+        "id": "4",
+        type: 'beers',
+        attributes: {
+          "name": "Blitzen Stout",
+          "brand": "Happy Hops",
+          "image": "images/beer-1.jpg"
+        }
+      }, {
+        "id": "5",
+        type: 'beers',
+        attributes: {
+          "name": "Misfit Malt Beverage",
+          "brand": "Happy Hops",
+          "image": "images/beer-2.jpg"
+        }
+      }, {
+        "id": "6",
+        type: 'beers',
+        attributes: {
+          "name": "Artic Amber Ale",
+          "brand": "Happy Hops",
+          "image": "images/beer-3.jpg"
+        }
+      }, {
+        "id": "7",
+        type: 'beers',
+        attributes: {
+          "name": "Jingle Rock Rye",
+          "brand": "Happy Hops",
+          "image": "images/beer-1.jpg"
+        }
+      }, {
+        "id": "8",
+        type: 'beers',
+        attributes: {
+          "name": "Vixen's Velvet",
+          "brand": "Happy Hops",
+          "image": "images/beer-2.jpg"
+        }
+      }, {
+        "id": "9",
+        type: 'beers',
+        attributes: {
+          "name": "Stocking Stuffer Stout",
+          "brand": "Happy Hops",
+          "image": "images/beer-3.jpg"
+        }
+      }, {
+        "id": "10",
+        type: 'beers',
+        attributes: {
+          "name": "Prancer's Punch",
+          "brand": "Happy Hops",
+          "image": "images/beer-1.jpg"
+        }
+      }, {
+        "id": "11",
+        type: 'beers',
+        attributes: {
+          "name": "Green Grinch Porter",
+          "brand": "Happy Hops",
+          "image": "images/beer-2.jpg"
+        }
+      }]
+    };
+  });
 }
 // These comments are here to help you get started. Feel free to delete them.
 

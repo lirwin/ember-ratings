@@ -1,3 +1,9 @@
-<h1>Beers</h1> 
+<h1>Beers</h1>
 
-{{outlet}}
+{{#each model as |beer|}}
+  <h2>{{beer.name}}</h2>
+  <!-- <p>Owner: {{rental.owner}}</p>
+  <p>Type: {{rental.type}}</p>
+  <p>Location: {{rental.city}}</p>
+  <p>Number of bedrooms: {{rental.bedrooms}}</p> -->
+{{/each}}
