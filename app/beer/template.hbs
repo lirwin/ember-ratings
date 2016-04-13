@@ -1,9 +1,13 @@
 <h1>Beers</h1>
 
-{{#each model as |beer|}}
-  <h2>{{beer.name}}</h2>
-  <!-- <p>Owner: {{rental.owner}}</p>
-  <p>Type: {{rental.type}}</p>
-  <p>Location: {{rental.city}}</p>
-  <p>Number of bedrooms: {{rental.bedrooms}}</p> -->
-{{/each}}
+<div className="ratingList">
+  {{#each model as |beer|}}
+    <div class="rating">
+      <h2>{{beer.name}}</h2>
+      <!-- <p>Owner: {{rental.owner}}</p>
+    <p>Type: {{rental.type}}</p>
+    <p>Location: {{rental.city}}</p>
+    <p>Number of bedrooms: {{rental.bedrooms}}</p> -->
+    </div>
+  {{/each}}
+</div>
