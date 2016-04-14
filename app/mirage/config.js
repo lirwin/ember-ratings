@@ -1,97 +1,97 @@
-export default function() {
-  this.get('/beers', function() {
+export default function () {
+  this.get('/beers', function () {
     return {
       data: [{
-        "id": "1",
+        id: '1',
         type: 'beers',
         attributes: {
-          "name": "Heat Miser's Hooch",
-          "brand": "Happy Hops",
-          "image": "images/beer-1.jpg"
+          'name': "Heat Miser's Hooch",
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-1.jpg'
         }
       }, {
-        "id": "2",
+        id: '2',
         type: 'beers',
         attributes: {
-          "name": "Santa's Lil' Helper",
-          "brand": "Happy Hops",
-          "image": "images/beer-2.jpg"
+          'name': "Santa's Lil' Helper",
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-2.jpg'
         }
       }, {
-        "id": "3",
+        id: '3',
         type: 'beers',
         attributes: {
-          "name": "Yukon's Silver Ale",
-          "brand": "Happy Hops",
-          "image": "images/beer-3.jpg"
+          'name': "Yukon's Silver Ale",
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-3.jpg'
         }
       }, {
-        "id": "4",
+        id: '4',
         type: 'beers',
         attributes: {
-          "name": "Blitzen Stout",
-          "brand": "Happy Hops",
-          "image": "images/beer-1.jpg"
+          'name': 'Blitzen Stout',
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-1.jpg'
         }
       }, {
-        "id": "5",
+        id: '5',
         type: 'beers',
         attributes: {
-          "name": "Misfit Malt Beverage",
-          "brand": "Happy Hops",
-          "image": "images/beer-2.jpg"
+          'name': 'Misfit Malt Beverage',
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-2.jpg'
         }
       }, {
-        "id": "6",
+        id: '6',
         type: 'beers',
         attributes: {
-          "name": "Artic Amber Ale",
-          "brand": "Happy Hops",
-          "image": "images/beer-3.jpg"
+          'name': 'Artic Amber Ale',
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-3.jpg'
         }
       }, {
-        "id": "7",
+        id: '7',
         type: 'beers',
         attributes: {
-          "name": "Jingle Rock Rye",
-          "brand": "Happy Hops",
-          "image": "images/beer-1.jpg"
+          'name': 'Jingle Rock Rye',
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-1.jpg'
         }
       }, {
-        "id": "8",
+        id: '8',
         type: 'beers',
         attributes: {
-          "name": "Vixen's Velvet",
-          "brand": "Happy Hops",
-          "image": "images/beer-2.jpg"
+          'name': "Vixen's Velvet",
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-2.jpg'
         }
       }, {
-        "id": "9",
+        id: '9',
         type: 'beers',
         attributes: {
-          "name": "Stocking Stuffer Stout",
-          "brand": "Happy Hops",
-          "image": "images/beer-3.jpg"
+          'name': 'Stocking Stuffer Stout',
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-3.jpg'
         }
       }, {
-        "id": "10",
+        id: '10',
         type: 'beers',
         attributes: {
-          "name": "Prancer's Punch",
-          "brand": "Happy Hops",
-          "image": "images/beer-1.jpg"
+          'name': "Prancer's Punch",
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-1.jpg'
         }
       }, {
-        "id": "11",
+        id: '11',
         type: 'beers',
         attributes: {
-          "name": "Green Grinch Porter",
-          "brand": "Happy Hops",
-          "image": "images/beer-2.jpg"
+          'name': 'Green Grinch Porter',
+          'brand': 'Happy Hops',
+          'image': 'assets/images/beer-2.jpg'
         }
       }]
-    };
-  });
+    }
+  })
 }
 // These comments are here to help you get started. Feel free to delete them.
 
@@ -165,7 +165,6 @@ export default function() {
   });
 
 */
-
 
 /*
 You can optionally export a config that is only loaded during tests
