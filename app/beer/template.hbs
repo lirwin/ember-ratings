@@ -3,11 +3,7 @@
 <div className="ratingList">
   {{#each model as |beer|}}
     <div class="rating">
-      <h2>{{beer.name}}</h2>
-      <!-- <p>Owner: {{rental.owner}}</p>
-    <p>Type: {{rental.type}}</p>
-    <p>Location: {{rental.city}}</p>
-    <p>Number of bedrooms: {{rental.bedrooms}}</p> -->
+    {{rating-container model=beer}}
     </div>
   {{/each}}
 </div>
