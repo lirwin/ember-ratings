@@ -1,8 +1,10 @@
 <div class="stars-container">
-  <div class="big-star clickable rating-1"></div>
-  <div class="big-star clickable rating-2"></div>
-  <div class="big-star clickable rating-3"></div>
-  <div class="big-star clickable rating-4"></div>
-  <div class="big-star clickable rating-5"></div>
+  {{! bind-attr class="isSearching:foo"}}
+
+  <div class="big-star clickable {{star-rated 1 model.rating}}"></div>
+  <div class="big-star clickable {{star-rated 2 model.rating}}"></div>
+  <div class="big-star clickable {{star-rated 3 model.rating}}"></div>
+  <div class="big-star clickable {{star-rated 4 model.rating}}"></div>
+  <div class="big-star clickable {{star-rated 5 model.rating}}"></div>
   <div class="clear"></div>
 </div>
