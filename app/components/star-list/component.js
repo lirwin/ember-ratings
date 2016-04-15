@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     this._super(...arguments)
     const numStars = 5
     const stars = []
-    for (let i = 0; i < numStars; i++) {
+    for (let i = 1; i <= numStars; i++) {
       stars.push({index: i})
     }
 
