@@ -4,9 +4,6 @@
   {{#each model as |beer|}}
     <div class="rating">
     {{rating-container model=beer rate=(action "saveRating")}}
-    <p>
-      {{beer.rating}}
-    </p>
     </div>
   {{/each}}
 </div>

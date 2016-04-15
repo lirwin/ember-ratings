@@ -1,7 +1,7 @@
 import Ember from 'ember'
 
 export function starRated ([starNum, rating]) {
-  return
+  return parseInt(rating) >= parseInt(starNum)
 }
 
 export default Ember.Helper.helper(starRated)

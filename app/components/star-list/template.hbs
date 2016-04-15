@@ -1,10 +1,6 @@
 <div class="stars-container">
-  {{! bind-attr class="isSearching:foo"}}
-
-  <div class="big-star clickable {{star-rated 1 model.rating}}"></div>
-  <div class="big-star clickable {{star-rated 2 model.rating}}"></div>
-  <div class="big-star clickable {{star-rated 3 model.rating}}"></div>
-  <div class="big-star clickable {{star-rated 4 model.rating}}"></div>
-  <div class="big-star clickable {{star-rated 5 model.rating}}"></div>
+  {{#each stars as |star|}}
+    {{star-container index=star.index model=model active=(star-rated star.index model.rating) rate=(action attrs.rate)}}
+  {{/each}}
   <div class="clear"></div>
 </div>

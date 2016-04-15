@@ -1,6 +1,6 @@
 export default function () {
   this.patch('/beers/:id', function (db, request) {
-    const id = request.params.id
+    const id = parseInt(request.params.id)
     const attrs = JSON.parse(request.requestBody).data.attributes
     delete attrs.id
     db.beers.update(id, attrs)
@@ -16,7 +16,7 @@ export default function () {
 
   // this.put('/beers/:id', 'beer')
   this.get('/beers/:id', function (db, request) {
-    let id = request.params.id
+    let id = parseInt(request.params.id)
 
     return {
       data: {
