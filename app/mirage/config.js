@@ -1,174 +1,132 @@
 export default function () {
-  this.get('/beers', function () {
+  this.put('/beers/:id', function (db, request) {
+    const id = request.params.id
+    const attrs = JSON.parse(request.requestBody).beer
+    const record = db.beers.update(id, attrs)
+
     return {
       data: [{
-        id: '1',
         type: 'beers',
-        attributes: {
-          'name': "Heat Miser's Hooch",
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-1.jpg'
-        }
-      }, {
-        id: '2',
-        type: 'beers',
-        attributes: {
-          'name': "Santa's Lil' Helper",
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-2.jpg'
-        }
-      }, {
-        id: '3',
-        type: 'beers',
-        attributes: {
-          'name': "Yukon's Silver Ale",
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-3.jpg'
-        }
-      }, {
-        id: '4',
-        type: 'beers',
-        attributes: {
-          'name': 'Blitzen Stout',
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-1.jpg'
-        }
-      }, {
-        id: '5',
-        type: 'beers',
-        attributes: {
-          'name': 'Misfit Malt Beverage',
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-2.jpg'
-        }
-      }, {
-        id: '6',
-        type: 'beers',
-        attributes: {
-          'name': 'Artic Amber Ale',
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-3.jpg'
-        }
-      }, {
-        id: '7',
-        type: 'beers',
-        attributes: {
-          'name': 'Jingle Rock Rye',
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-1.jpg'
-        }
-      }, {
-        id: '8',
-        type: 'beers',
-        attributes: {
-          'name': "Vixen's Velvet",
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-2.jpg'
-        }
-      }, {
-        id: '9',
-        type: 'beers',
-        attributes: {
-          'name': 'Stocking Stuffer Stout',
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-3.jpg'
-        }
-      }, {
-        id: '10',
-        type: 'beers',
-        attributes: {
-          'name': "Prancer's Punch",
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-1.jpg'
-        }
-      }, {
-        id: '11',
-        type: 'beers',
-        attributes: {
-          'name': 'Green Grinch Porter',
-          'brand': 'Happy Hops',
-          'image': 'assets/images/beer-2.jpg'
-        }
+        id: id,
+        attributes: record
       }]
     }
   })
-}
-// These comments are here to help you get started. Feel free to delete them.
 
-/*
-  Config (with defaults).
+  // this.put('/beers/:id', 'beer')
 
-  Note: these only affect routes defined *after* them!
-*/
-// this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
-// this.namespace = '';    // make this `api`, for example, if your API is namespaced
-// this.timing = 400;      // delay for each request, automatically set to 0 during testing
-
-/*
-  Route shorthand cheatsheet
-*/
-/*
-  GET shorthands
-
-  // Collections
-  this.get('/contacts');
-  this.get('/contacts', 'users');
-  this.get('/contacts', ['contacts', 'addresses']);
-
-  // Single objects
-  this.get('/contacts/:id');
-  this.get('/contacts/:id', 'user');
-  this.get('/contacts/:id', ['contact', 'addresses']);
-*/
-
-/*
-  POST shorthands
-
-  this.post('/contacts');
-  this.post('/contacts', 'user'); // specify the type of resource to be created
-*/
-
-/*
-  PUT shorthands
-
-  this.put('/contacts/:id');
-  this.put('/contacts/:id', 'user'); // specify the type of resource to be updated
-*/
-
-/*
-  DELETE shorthands
-
-  this.del('/contacts/:id');
-  this.del('/contacts/:id', 'user'); // specify the type of resource to be deleted
-
-  // Single object + related resources. Make sure parent resource is first.
-  this.del('/contacts/:id', ['contact', 'addresses']);
-*/
-
-/*
-  Function fallback. Manipulate data in the db via
-
-    - db.{collection}
-    - db.{collection}.find(id)
-    - db.{collection}.where(query)
-    - db.{collection}.update(target, attrs)
-    - db.{collection}.remove(target)
-
-  // Example: return a single object with related models
-  this.get('/contacts/:id', function(db, request) {
-    var contactId = +request.params.id;
-
+  // this.get('/beers')
+  this.get('/beers', function (db, request) {
+    console.log('get beers route db: ', db)
     return {
-      contact: db.contacts.find(contactId),
-      addresses: db.addresses.where({contact_id: contactId})
-    };
-  });
-
-*/
-
-/*
-You can optionally export a config that is only loaded during tests
-export function testConfig() {
-
+      data: db.beers.map((attrs) => ({
+        type: 'beers',
+        id: attrs.id,
+        attributes: attrs
+      }))
+    }
+  })
 }
-*/
+//     // return {
+//     //   data: [{
+//     //     id: '1',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': "Heat Miser's Hooch",
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-1.jpg',
+//     //       'rating': '1'
+//     //     }
+//     //   }, {
+//     //     id: '2',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': "Santa's Lil' Helper",
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-2.jpg',
+//     //       'rating': '3'
+//     //     }
+//     //   }, {
+//     //     id: '3',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': "Yukon's Silver Ale",
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-3.jpg',
+//     //       'rating': '0'
+//     //     }
+//     //   }, {
+//     //     id: '4',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': 'Blitzen Stout',
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-1.jpg',
+//     //       'rating': '0'
+//     //     }
+//     //   }, {
+//     //     id: '5',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': 'Misfit Malt Beverage',
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-2.jpg',
+//     //       'rating': '4'
+//     //     }
+//     //   }, {
+//     //     id: '6',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': 'Artic Amber Ale',
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-3.jpg',
+//     //       'rating': '4'
+//     //     }
+//     //   }, {
+//     //     id: '7',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': 'Jingle Rock Rye',
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-1.jpg',
+//     //       'rating': '5'
+//     //     }
+//     //   }, {
+//     //     id: '8',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': "Vixen's Velvet",
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-2.jpg',
+//     //       'rating': '0'
+//     //     }
+//     //   }, {
+//     //     id: '9',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': 'Stocking Stuffer Stout',
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-3.jpg',
+//     //       'rating': '1'
+//     //     }
+//     //   }, {
+//     //     id: '10',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': "Prancer's Punch",
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-1.jpg',
+//     //       'rating': '3'
+//     //     }
+//     //   }, {
+//     //     id: '11',
+//     //     type: 'beers',
+//     //     attributes: {
+//     //       'name': 'Green Grinch Porter',
+//     //       'brand': 'Happy Hops',
+//     //       'image': 'assets/images/beer-2.jpg',
+//     //       'rating': '2'
+//     //     }
+//     //   }]
+//     // }
+//   })
