@@ -3,7 +3,10 @@
 <div className="ratingList">
   {{#each model as |beer|}}
     <div class="rating">
-    {{rating-container model=beer}}
+    {{rating-container model=beer rate=(action "saveRating")}}
+    <p>
+      {{beerRating}}
+    </p>
     </div>
   {{/each}}
 </div>
