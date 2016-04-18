@@ -1,13 +1,11 @@
-<div class="stars-container">
-  {{#each stars as |star|}}
-    {{star-item
-      index=star.index
-      active=(star-rated star.index model.rating)
-      rate=(action attrs.rate model.id star.index)
-      hover=(star-rated star.index hoverIndex)
-      enter=(action 'enter')
-      leave=(action 'leave')
-    }}
-  {{/each}}
-  <div class="clear"></div>
-</div>
+{{#each stars as |star|}}
+  {{star-item
+    index=star.index
+    active=(star-rated star.index model.rating)
+    rate=(action attrs.rate model.id star.index)
+    hover=(star-rated star.index hoverIndex)
+    enter=(action 'enter')
+    leave=(action 'leave')
+  }}
+{{/each}}
+<div class="clear"></div>

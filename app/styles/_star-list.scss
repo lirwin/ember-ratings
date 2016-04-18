@@ -13,11 +13,11 @@
 }
 
 
-.stars-container .big-star.highlight {
+.stars-container .big-star.active {
   background-position: -97px -387px;
 }
 
-.stars-container .big-star.highlight.hover, .rating .stars-container .big-star.hover {
+.stars-container .big-star.active.hover, .stars-container .big-star.hover {
   background-position: -51px -387px;
 
 }

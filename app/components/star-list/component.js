@@ -2,6 +2,7 @@ import Ember from 'ember'
 
 export default Ember.Component.extend({
   numStars: 5,
+  classNames: ['stars-container'],
   init () {
     this._super(...arguments)
 

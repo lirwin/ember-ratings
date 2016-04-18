@@ -1,6 +1,8 @@
 import Ember from 'ember'
 
 export default Ember.Component.extend({
+  classNames: ['big-star'],
+  classNameBindings: ['active', 'hover'],
   click () {
     this.attrs.rate()
   },
